@@ -4,23 +4,17 @@ import City from './pages/City'
 import Map from './pages/Map'
 import Error from './pages/Error'
 
-import {
-  NavLink,
-  HashRouter as Router,
-  Route,
-  Switch,
-  Redirect
-} from 'react-router-dom'
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
 class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className="app">
+        {/* <div className="app">
           <NavLink to="/home">首页</NavLink>
           <NavLink to="/city">城市</NavLink>
           <NavLink to="/map">地图</NavLink>
-        </div>
+        </div> */}
 
         <Switch>
           <Redirect exact from="/" to="/home"></Redirect>
