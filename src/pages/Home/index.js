@@ -78,6 +78,16 @@ class Home extends React.Component {
       </div>
     )
   }
+
+  componentDidUpdate(prevProps) {
+    // console.log('上次', prevProps)
+    // console.log('本次', this.props)
+    if (prevProps.location.pathname !== this.props.location.pathname) {
+      this.setState({
+        selectedTab: this.props.location.pathname
+      })
+    }
+  }
 }
 
 export default Home
